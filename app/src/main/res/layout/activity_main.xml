@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_asr"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="ASR"
+            android:layout_weight="0.3"
+            android:scrollbars="horizontal"
+            android:lines="3"
+            android:background="@android:color/darker_gray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_output"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="OUTPUT"
+            android:layout_weight="0.3"
+            android:scrollbars="horizontal"
+            android:lines="3"
+            android:background="@android:color/holo_blue_bright"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edt_input"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:lines="1"
+            android:text="今天天气怎么样" />
+
+        <Button
+            android:id="@+id/btn_combine"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:text="COMBINE(PRESS TO SPEAK)" />
+
+        <Button
+            android:id="@+id/btn_combine_file"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:text="COMBINE(USE FILE)" />
+
+        <Button
+            android:id="@+id/btn_asr"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:text="ASR(USE VAD)" />
+
+        <Button
+            android:id="@+id/btn_nlp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:text="NLP" />
+
+        <Button
+            android:id="@+id/btn_tts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:text="TTS" />
+    </LinearLayout>
+</LinearLayout>

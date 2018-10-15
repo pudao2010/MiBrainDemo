@@ -1,0 +1,22 @@
+MiBrainSDKDemo/app下新建目录libs，其下放置SDK的两个jar包，oauth的jar包和对应架构的so文件（通常是armeabi-v7a架构）
+如下所示：
+
+libs
+├── androidaisdk-0.3.18.jar
+├── armeabi-v7a
+│   ├── libmibraindec.so
+│   ├── libmibrainjni.so
+│   └── libmibrainsdk.so
+├── mibrainsdk-0.3.18.jar
+└── xiaomi-oauth.1.6.8.jar
+
+
+界面第一行TextView为ASR识别结果
+第二行TextView为NLP返回结果
+第三行EditText为发送给NLP或者TTS的输入
+
+COMBINE按钮为发送组合请求，按住时开始录音，松开结束录音，此时会发送完整的ASR，NLP，TTS请求，例如说“今天天气怎么样”，第一行为ASR识别的结果，第二行为NLP返回的结果。
+COMBINE(USE FILE)为发送组合请求，但不是通过内置录音，此功能实现是读取assets下准备好的PCM文件并发送，其他的和COMBINE按钮功能一致。
+ASR(USE VAD)发送ASR请求，按下开始录音，使用云端VAD来判断是否说话完毕，结果会显示在第一行。
+NLP发送NLP请求，输入为第三行，结果显示在第二行中。
+TTS发送TTS请求，输入为第三行，结果自动播放。
